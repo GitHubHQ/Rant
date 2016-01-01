@@ -42,8 +42,11 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //if user successfully logs in, initialize the view, else quit
         if(resultCode == RESULT_OK){
+            //init activity_main
             setContentView(R.layout.activity_main);
+            //logout button basically restarts MainActivity after logging out
             Button b = (Button) findViewById(R.id.logout);
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -84,12 +87,6 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        // Set up the profile page based on the current user.
-
     }
 
     /**
