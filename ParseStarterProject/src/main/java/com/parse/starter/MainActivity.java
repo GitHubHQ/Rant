@@ -62,6 +62,8 @@ public class MainActivity extends Activity {
 
             ParseUser user = ParseUser.getCurrentUser();
             showProfile(user);
+            user.put("rating",5);
+            user.saveInBackground();
         }else{
             finish();
         }
