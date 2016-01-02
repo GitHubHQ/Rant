@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\harrison\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="D:\workspace\Rant\ParseStarterProject\src\main\jniLibs\sinch-android-rtc-3.7.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-51d546eb4a1d2168c67d61e858ab3c45cb7ce232.jar" />
-    </item>
-    <item
-        jar="D:\workspace\Rant\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-a9d8332899b4286434a4fef868dfe129554a8a29.jar" />
-    </item>
-    <item
-        jar="D:\workspace\Rant\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-3d73ad9a83aa5740b4ee68bdb2ffbb11b5ebc6a2.jar" />
-    </item>
-    <item
-        jar="D:\workspace\Rant\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parseui-login-android\0.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4a2c63ab232bd2c7b750e74794015c8b09aca351">
-        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-ab1a5c46e376f6fd624ea00639d3d7856b8d846f.jar" />
-    </item>
-    <item
-        jar="D:\workspace\Rant\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parseui-widget-android\0.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="76d7e619a84e1c57ad7b153ba84b1213f8ff9ef1">
-        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-6d1143066dc82946bbc6c69de7374566797017c0.jar" />
+        sha1="bf69cf98f8d8eb6c78ec7d0a0bcb016e95f79b5e">
+        <dex dex="D:\workspace\Rant\ParseStarterProject\build\intermediates\pre-dexed\debug\sinch-android-rtc-3.7.1-f81c6a71912554530497ee92a4960702f4721cdb.jar" />
     </item>
 
 </items>

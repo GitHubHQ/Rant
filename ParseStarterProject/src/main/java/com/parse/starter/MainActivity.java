@@ -29,10 +29,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        //if no current user cached, start login activity
         if(ParseUser.getCurrentUser().getEmail()==null){
             ParseLoginBuilder builder = new ParseLoginBuilder(this);
             startActivityForResult(builder.build(), 0);
         }else{
+            //jank way to call onActivityResult
             onActivityResult(0,RESULT_OK,null);
         }
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
@@ -47,8 +49,10 @@ public class MainActivity extends Activity {
             //init activity_main
             setContentView(R.layout.activity_main);
             //logout button basically restarts MainActivity after logging out
-            Button b = (Button) findViewById(R.id.logout);
-            b.setOnClickListener(new View.OnClickListener() {
+            Button logout = (Button) findViewById(R.id.logout);
+            Button start = (Button) findViewById(R.id.message);
+            Button buds = (Button) findViewById(R.id.buddies);
+            logout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ParseUser.logOut();
@@ -59,6 +63,22 @@ public class MainActivity extends Activity {
 
                 }
             });
+            start.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(i);
+                }
+            });
+            buds.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+                    final Intent serviceIntent = new Intent(getApplicationContext(), SinchService.class);
+                    startActivity(intent);
+                    startService(serviceIntent);
+                }
+            });
 
             ParseUser user = ParseUser.getCurrentUser();
             showProfile(user);
@@ -67,6 +87,11 @@ public class MainActivity extends Activity {
         }else{
             finish();
         }
+    }
+    @Override
+    public void onDestroy() {
+        stopService(new Intent(this, SinchService.class));
+        super.onDestroy();
     }
 
     @Override
