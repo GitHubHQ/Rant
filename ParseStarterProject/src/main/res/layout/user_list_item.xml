@@ -1,7 +1,38 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/userListItem"
-    android:textColor="#a9a9a9"
-    android:padding="16dp"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:textSize="20sp" />
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:paddingBottom="@dimen/com_parse_ui_vertical_margin"
+    android:paddingLeft="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingRight="@dimen/com_parse_ui_horizontal_margin"
+    android:paddingTop="@dimen/com_parse_ui_vertical_margin">
+
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#a9a9a9"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_toRightOf="@id/friend_name"
+        android:id="@+id/user_email"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:textColor="#a9a9a9"
+        android:textSize="10sp" />
+</RelativeLayout>

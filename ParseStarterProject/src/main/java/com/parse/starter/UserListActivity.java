@@ -3,9 +3,11 @@ package com.parse.starter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -41,16 +43,22 @@ public class UserListActivity extends AppCompatActivity {
                         emails.add(userList.get(i).getUsername().toString());
                     }
                     ListView usersListView = (ListView) findViewById(R.id.usersListView);
+                    UserAdapter itemAdapter = new UserAdapter(UserListActivity.this,R.id.usersListView,names,emails);
                     ArrayAdapter<String> namesArrayAdapter =
                             new ArrayAdapter<String>(getApplicationContext(),
                                     R.layout.user_list_item, names);
-                    usersListView.setAdapter(namesArrayAdapter);
-                    usersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> a, View v, int i, long l) {
-                            openConversation(emails, i);
-                        }
-                    });
+                    usersListView.setAdapter(itemAdapter);
+                    usersListView.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+                    AdapterView.OnItemClickListener mListener = new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> a, View v, int i, long l) {
+                                    Log.i("clicked", i + "");
+                                    openConversation(emails, i);
+
+                                }
+                            };
+                    usersListView.setOnItemClickListener( mListener);
+
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Error loading user list",

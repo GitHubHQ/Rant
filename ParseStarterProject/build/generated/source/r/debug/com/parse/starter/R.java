@@ -1586,7 +1586,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d003d;
         public static final int action_mode_bar_stub=0x7f0d003c;
         public static final int action_mode_close_button=0x7f0d0025;
-        public static final int action_settings=0x7f0d0082;
+        public static final int action_settings=0x7f0d0083;
         public static final int activity_chooser_view_content=0x7f0d0026;
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d0016;
@@ -1614,6 +1614,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f0d0027;
         public static final int expanded_menu=0x7f0d0037;
         public static final int facebook_login=0x7f0d0060;
+        public static final int friend_name=0x7f0d0081;
         public static final int home=0x7f0d0004;
         public static final int homeAsUp=0x7f0d000d;
         public static final int icon=0x7f0d002b;
@@ -1698,7 +1699,7 @@ containing a value of this type.
         public static final int up=0x7f0d0008;
         public static final int useLogo=0x7f0d0012;
         public static final int user=0x7f0d004f;
-        public static final int userListItem=0x7f0d0081;
+        public static final int user_email=0x7f0d0082;
         public static final int usersListView=0x7f0d0053;
         public static final int withText=0x7f0d001a;
         public static final int wrap_content=0x7f0d001d;
